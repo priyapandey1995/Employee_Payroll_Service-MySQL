@@ -91,3 +91,17 @@ mysql> select * from employee_payroll;
 |  3 | charlie |  30000 | 2020-05-21 |
 +----+---------+--------+------------+
 3 rows in set (0.00 sec)
+
+-------------------------UC5------------------------------------
+// to select the salary
+
+
+mysql> select * from employee_payroll
+    -> where start between cast('2019-01-03' as date ) and date(now());
++----+---------+--------+------------+
+| id | Name    | salary | start      |
++----+---------+--------+------------+
+|  1 | bill    |  10000 | 2019-01-03 |
+|  3 | charlie |  30000 | 2020-05-21 |
++----+---------+--------+------------+
+2 rows in set (0.01 sec)
